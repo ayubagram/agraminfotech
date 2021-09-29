@@ -33,6 +33,12 @@
         </div>  
       </div>
     </v-container>  
+    <v-container>
+      <v-divider />
+      <div class="text-center mt-6">
+        Copyright ©{{ new Date().getFullYear() }} — <strong>Agram Infotech Pvt. Ltd.</strong>
+      </div>
+    </v-container>
   </v-footer>
 </template>
 

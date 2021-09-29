@@ -11,7 +11,7 @@
         <v-carousel-item v-for="(item, i) in slides" :key="i" :src="item.img">
           <div style="height: 100%; width: 100%; background-color: rgb(0 0 0 / 50%);" class="d-flex flex-column justify-center align-center text-center white--text pa-3">
             <div class="display-1 mb-0 mb-md-2">{{ item.title }}</div>
-            <div>{{ item.desc }}</div>
+            <div class="mx-auto" style="max-width: 500px;">{{ item.desc }}</div>
           </div>
         </v-carousel-item>
       </v-carousel>
