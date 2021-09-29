@@ -257,6 +257,10 @@ button {
 .v-input .v-icon.v-icon { font-size: 18px !important; }
 .v-text-field--outlined.v-input--dense .v-label { top: 14px !important; }
 
+.active__nav {
+  color: #fff !important;
+  background-color: rgba(255, 255, 255, .25) !important;
+}
 
 /* Media Quaries */
 @media (max-width: 960px) {

@@ -15,7 +15,7 @@
             <li v-for="(item, i) in items" :key="i">
               <v-btn color="primary" class="text-capitalize" style="font-weight: 400;" tile text :to="item.to" min-height="62">{{ item.title }}</v-btn>
               <v-list class="list pa-0" v-if="item.children">
-                <v-list-item-group v-model="selectedItem" color="primary">
+                <v-list-item-group color="primary">
                   <v-list-item style="min-height: 60px;" v-for="(child, c) in item.children" :key="c" link :to="child.to">
                     <v-list-item-content class="primary--text">{{ child.title }}</v-list-item-content>
                   </v-list-item>
@@ -29,17 +29,25 @@
 
     <v-navigation-drawer color='primary' dark v-model="drawer" app disable-resize-watcher>
       <v-list expand nav tile shaped>
-        <v-list-item-group v-model="selectedItem">
-          <v-list-item v-for="(item, i) in items" :key="i" :to="`${item.to}`">
-            <v-list-item-icon class="mx-3">
-              <v-icon size='20' v-text="item.icon"></v-icon>
-            </v-list-item-icon>
-
+        <div v-for="(item, i) in items" :key="i">
+          <v-list-item :to="`${item.to}`" v-if="!item.children">
             <v-list-item-content>
-              <v-list-item-title v-text="item.title" style="letter-spacing: 1px;" />
+              <v-list-item-title v-text="item.title" style="letter-spacing: 1px;" class="pl-3" />
             </v-list-item-content>
           </v-list-item>
-        </v-list-item-group>
+          <v-list-group v-else active-class="active__nav">
+            <template v-slot:activator>
+              <v-list-item-content>
+                <v-list-item-title v-text="item.title" style="letter-spacing: 1px;" class="pl-3" />
+              </v-list-item-content>
+            </template>
+            <v-list-item v-for="(child, c) in item.children" :key="c" active-class="active__nav" :to="child.to">
+              <v-list-item-content>
+                <v-list-item-title v-text="child.title" style="letter-spacing: 1px;" class="pl-6" />
+              </v-list-item-content>
+            </v-list-item>
+          </v-list-group>
+        </div>
       </v-list>
     </v-navigation-drawer>
   </div> 
@@ -49,7 +57,6 @@
 export default {
   data: () => ({
     drawer: false,
-    selectedItem: 0,
     items: [
       { title: 'Home', icon: 'mdi-home', to: '/' },
       { 
@@ -94,11 +101,6 @@ export default {
       { title: 'Contact Us', icon: 'mdi-account-box', to: '/contact-us' }
     ]
   }), 
-  watch: {
-    selectedItem () {
-      this.drawer = false
-    }
-  },
 }
 </script>
 
@@ -108,7 +110,6 @@ ul {
   padding: 0 !important;
 }
 ul li { list-style: none; }
-
 /* main menu */
 .main-menu ul .list { 
   display: none; 
