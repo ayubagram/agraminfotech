@@ -1,5 +1,6 @@
 <template>
   <v-container>
+    <div class="title mb-3 text-center">We don't have any openings currently, please visit us again soon.</div>
     <div style="font-size: 25px; font-weight: 500;" class="mb-5">Benefits of Working With Us</div>
     <v-row>
       <v-col cols="12" sm="6" md="4" v-for="(benefit, b) in benefits" :key="b">
@@ -9,7 +10,7 @@
         </div>
       </v-col>
     </v-row>
-    <div style="font-size: 25px; font-weight: 500;" class="mt-8 mb-4">Available Opening Jobs</div>
+    <!-- <div style="font-size: 25px; font-weight: 500;" class="mt-8 mb-4">Available Opening Jobs</div>
     <v-row>
       <v-col cols="12" sm="6" md="4" v-for="(career, c) in careers" :key="c">
         <div class="jobs d-flex">
@@ -21,7 +22,7 @@
           </div>
         </div>
       </v-col>
-    </v-row>
+    </v-row> -->
   </v-container>
 </template>
 
@@ -34,7 +35,7 @@ export default {
   data: () => ({
     benefits: [
       { title: 'Great Team', img: require('@/assets/benefits/team.png') },
-      { title: 'Ream Impact', img: require('@/assets/benefits/real.png') },
+      { title: 'Real Impact', img: require('@/assets/benefits/real.png') },
       { title: 'Extra Benefits', img: require('@/assets/benefits/benefit.png') },
       { title: 'Dynamic WorkSpace', img: require('@/assets/benefits/team.png') },
       { title: 'Education', img: require('@/assets/benefits/education.png') },

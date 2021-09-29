@@ -6,7 +6,7 @@
           <img src="../assets/logo.png" height="40" alt="Agram logo">
           <img src="../assets/agram_text.png" height="40" alt="Agram logo">
         </div>   
-        <div class="mt-3 mb-4 para black--text">You Dream, We Make IT Happen</div>
+        <div class="mt-3 mb-4 para black--text">Enabling Technology <br> To Transform</div>
         <div class="socials mt-4">
           <span class="para font-weight-bold black--text">Follow Us : </span>  
           <v-btn icon v-for="(social, s) in socials" :key="s" :color="social.color" target="_blank" :href="social.to">
@@ -46,11 +46,11 @@ export default {
       { title: 'Gallery', to: '/company/gallery' }
     ],
     products: [
-      { title: 'Agram Lab', to: '/products/agram-lab' },
-      { title: 'Dairy Management', to: '/products/dairy-management' },
-      { title: 'Hospital Management', to: '/products/hospital-management' },
-      { title: 'Industry Management', to: '/products/industry-management' },
-      { title: 'Payroll Management', to: '/products/payroll-management' },
+      { title: 'Agram Lab (Pathology)', to: '/products/agram-lab' },
+      { title: 'Dairy Management System', to: '/products/dairy-management' },
+      { title: 'Hospital Management System', to: '/products/hospital-management' },
+      { title: 'Industry Management System', to: '/products/industry-management' },
+      { title: 'Payroll Management System', to: '/products/payroll-management' },
       // { title: 'UI/UX', to: '/products/ui-ux' }
     ],
     services: [

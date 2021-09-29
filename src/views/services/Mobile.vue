@@ -22,25 +22,25 @@
       </v-row>
 
       <div style="font-size: 25px; font-weight: 500;" class="mt-8 mb-5">Technologies we use to build Mobile Apps</div>
-      <v-row class="mb-10">
+      <!-- <v-row class="mb-10">
         <v-col cols="12" sm="6" md="4" v-for="(tech, t) in techs" :key="t">
           <div class="benefit pa-4">
             <img :src="tech.img">
-            <!-- <div class="my-2">{{ tech.title }}</div> -->
-            <div class="benefit-desc mt-3">{{ tech.desc }}</div>
+            <div class="mt-2">{{ tech.title }}</div>
+            <div class="benefit-desc mt-1">{{ tech.desc }}</div>
           </div>
         </v-col>
-      </v-row>
-
+      </v-row> -->
+    </v-container>
+    <Techs :techs="techs" />
+    <v-container>
       <ContactForm title="Let's Discuss About Your Project" />
     </v-container>
   </div>
 </template>
 
 <script>
-import ContactForm from '@/components/ContactForm'
 export default {
-  components: { ContactForm }, 
   metaInfo: () => ({
     title: 'Top-Notch Mobile App Development Company in Nepal| Agram Infotech',
     meta: [
@@ -70,12 +70,12 @@ export default {
       { title: 'App Prototype & Strategy', desc: 'We never make the mobile app strategy a lengthy task. Agram leads the niche of mobile App prototype services offering a robust evaluating stage before moving to real-time application.', img: require('@/assets/icons/prototype.jpg') }
     ],
     techs: [
-      { title: 'JAVA', img: require('@/assets/techs/java.png'), desc: 'Java is an Object Oriented Programming Language used at Agram Infotech to develop Internet applications, mobile apps, and software programs. Also, it is being used in IOT & AI.' },
-      { title: 'React Native', img: require('@/assets/techs/react.png'), desc: 'As a preferred React Native Mobile app development company, we help in developing your core mobile app architecture and enable support for the required frontend & backend tools.' },
-      { title: 'Flutter', img: require('@/assets/techs/flutter.png'), desc: 'Flutter is basically a Mobile App Development Framework which has been developed by Google Company. Flutter supports cross platform, means you can create Android, iOS or Web App by writing a bar code.' },
-      { title: 'XD', img: require('@/assets/techs/xd.png'), desc: 'XD is a vector-based user experience design tool used for web apps and mobile apps, developed and published by Adobe Inc. Browse the latest Adobe XD experience with us.' },
-      { title: 'HTML5', img: require('@/assets/techs/html5.png'), desc: 'Hypertext Markup Language HTML5 is updated version of HTML which is a standard language that has been used to create a website by the developer of Agram.' },
-      { title: 'Python', img: require('@/assets/techs/python.png'), desc: 'Using Python an object oriented programming language; we perform tasks such as website building, app development, machine learning, data analysis, web scraping and natural language processing.' },
+      { title: 'JAVA', color: 'backgroundColor: rgba(73 89 255 / 10%);', img: require('@/assets/techs/java.png'), desc: 'Java is an Object Oriented Programming Language used at Agram Infotech to develop Internet applications, mobile apps, and software programs. Also, it is being used in IOT & AI.' },
+      { title: 'React Native', color: 'backgroundColor: rgb(128 222 234 / 10%);', img: require('@/assets/techs/react.png'), desc: 'As a preferred React Native Mobile app development company, we help in developing your core mobile app architecture and enable support for the required frontend & backend tools.' },
+      { title: 'XD', color: 'backgroundColor: rgb(152 44 233 / 10%);', img: require('@/assets/techs/xd.png'), desc: 'XD is a vector-based user experience design tool used for web apps and mobile apps, developed and published by Adobe Inc. Browse the latest Adobe XD experience with us.' },
+      { title: 'Flutter', color: 'backgroundColor: rgb(64 196 255 / 10%);', img: require('@/assets/techs/flutter.png'), desc: 'Flutter is basically a Mobile App Development Framework which has been developed by Google Company. Flutter supports cross platform, means you can create Android, iOS or Web App by writing a bar code.' },
+      { title: 'HTML5', color: 'backgroundColor: rgb(230 81 0 / 10%);', img: require('@/assets/techs/html5.png'), desc: 'Hypertext Markup Language HTML5 is updated version of HTML which is a standard language that has been used to create a website by the developer of Agram.' },
+      { title: 'Python', color: 'backgroundColor: rgb(2 119 189 / 10%);', img: require('@/assets/techs/python.png'), desc: 'Using Python an object oriented programming language; we perform tasks such as website building, app development, machine learning, data analysis, web scraping and natural language processing.' },
     ]
   })
 }

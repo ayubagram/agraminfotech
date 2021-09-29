@@ -27,16 +27,18 @@
       <div style="font-size: 25px; font-weight: 500;" class="mt-8 mb-3">Technologies - The pillar of Our Every App</div>
       <div class="mb-5">We select the prime and newest from the technology repository to create a demand application. Then, associating with the best technology providers and examining the newest trends, our expert on-demand app developers oversee brainwave sessions to decide how the application will function and what resources will be required to create a successful and flawless demand mobile app.</div>
       
-      <v-row class="mb-10">
+      <!-- <v-row class="mb-10">
         <v-col cols="12" sm="6" md="4" v-for="(tech, t) in techs" :key="t">
           <div class="benefit pa-4">
             <img :src="tech.img">
-            <!-- <div class="my-2">{{ tech.title }}</div> -->
+            <div class="my-2">{{ tech.title }}</div>
             <div class="benefit-desc mt-3">{{ tech.desc }}</div>
           </div>
         </v-col>
-      </v-row>
-
+      </v-row> -->
+    </v-container>
+    <Techs :techs="techs" />
+    <v-container>
       <ContactForm title="Ready to Make Your On-Demand App the Next History" />
     </v-container>
   </div>
@@ -71,14 +73,14 @@ export default {
       { title: 'Doctor On-Demand Service', img: require('@/assets/service/doctor.png'), desc: 'On-demand service apps built to channelize superior comparability between doctors and patients, apps that handle appointments, reviews, medical history, medical consultancy, tracking, etc. Graceful your health business using our professional on-demand doctor appointment app development services across iOS and Android.' },
     ],
     techs: [
-      { title: 'Flutter', img: require('@/assets/techs/flutter.png'), desc: 'We use flutter framework for On Mobile App Development. Flutter supports cross platform, means you can create Android, iOS or Web App by writing a bar code.' },
-      { title: 'React Native', img: require('@/assets/techs/react.png'), desc: 'As a preferred React Native on Mobile app Development Company, we help in developing your core mobile app architecture and enable support for the required frontend & backend tools.' },
-      { title: 'JAVA', img: require('@/assets/techs/java.png'), desc: 'Java is an Object Oriented Programming Language used at Agra Infotech to develop Internet applications, mobile apps, and software programs. Also, it is being used in IOT & AI.' },
-      { title: 'Firebase', img: require('@/assets/techs/firebase.png'), desc: 'Firebase is Google\'s mobile application development platform that helps you build, improve, and grow your on demand application.' },
-      { title: 'Angular.js', img: require('@/assets/techs/angular.png'), desc: 'Angular.js is a Type Script-based, open-source, front end mobile application framework which is great for handling your on demand application. ' },
-      { title: 'Vue.js', img: require('@/assets/techs/vue.png'), desc: 'Using Vue.js framework, we develop custom front-ends, for on-demand mobile applications that enables us to build a lightweight and highly performant mobile apps.' },
-      { title: 'Node.js', img: require('@/assets/techs/node.png'), desc: 'Node.js is definitely the foremost when you are looking to build a lightweight, yet highly systematic website. It is used for non-blocking, event-driven servers for websites and back-end API.' },
-      { title: 'MongoDB', img: require('@/assets/techs/mongodb.png'), desc: 'We specialize in building PHP-powered dynamic on demand web applications using MongoDB as the data backend. Right from schema design, performance and tuning.' }
+      { title: 'Flutter', color: 'backgroundColor: rgb(64 196 255 / 10%);', img: require('@/assets/techs/flutter.png'), desc: 'We use flutter framework for On Mobile App Development. Flutter supports cross platform, means you can create Android, iOS or Web App by writing a bar code.' },
+      { title: 'React Native', color: 'backgroundColor: rgb(129 222 234 / 10%);', img: require('@/assets/techs/react.png'), desc: 'As a preferred React Native on Mobile app Development Company, we help in developing your core mobile app architecture and enable support for the required frontend & backend tools.' },
+      { title: 'JAVA', color: 'backgroundColor: rgb(78 94 255 / 10%);', img: require('@/assets/techs/java.png'), desc: 'Java is an Object Oriented Programming Language used at Agra Infotech to develop Internet applications, mobile apps, and software programs. Also, it is being used in IOT & AI.' },
+      { title: 'Firebase', color: 'backgroundColor: rgb(255 111 0 / 10%);', img: require('@/assets/techs/firebase.png'), desc: 'Firebase is Google\'s mobile application development platform that helps you build, improve, and grow your on demand application.' },
+      { title: 'Angular.js', color: 'backgroundColor: rgb(183 28 28 / 10%);', img: require('@/assets/techs/angular.png'), desc: 'Angular.js is a Type Script-based, open-source, front end mobile application framework which is great for handling your on demand application. ' },
+      { title: 'Vue.js', color: 'backgroundColor: rgb(129 199 132 / 10%);', img: require('@/assets/techs/vue.png'), desc: 'Using Vue.js framework, we develop custom front-ends, for on-demand mobile applications that enables us to build a lightweight and highly performant mobile apps.' },
+      { title: 'Node.js', color: 'backgroundColor: rgb(55 71 79 / 10%);', img: require('@/assets/techs/node.png'), desc: 'Node.js is definitely the foremost when you are looking to build a lightweight, yet highly systematic website. It is used for non-blocking, event-driven servers for websites and back-end API.' },
+      { title: 'MongoDB', color: 'backgroundColor: rgb(93 64 55 / 10%);', img: require('@/assets/techs/mongodb.png'), desc: 'We specialize in building PHP-powered dynamic on demand web applications using MongoDB as the data backend. Right from schema design, performance and tuning.' }
     ]
   })
 }

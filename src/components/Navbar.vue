@@ -58,7 +58,7 @@ export default {
           { title: 'About Us', to: '/company/about-us' },
           { title: 'Portfolio', to: '/company/portfolio' },
           { title: 'Career', to: '/company/career' },
-          { title: 'Gallery', to: '/company/gallery' },
+          // { title: 'Gallery', to: '/company/gallery' },
         ]
       },
       { 
@@ -81,16 +81,16 @@ export default {
       { 
         title: 'Products', icon: 'mdi-check-decagram', to: '/products',
         children: [
-          { title: 'Agram Lab', to: '/products/agram-lab' },
-          { title: 'Dairy Management', to: '/products/dairy-management' },
-          { title: 'Hospital Management', to: '/products/hospital-management' },
-          { title: 'Industry Management', to: '/products/industry-management' },
-          { title: 'Payroll Management', to: '/products/payroll-management' },
+          { title: 'Agram Lab (Pathology)', to: '/products/agram-lab' },
+          { title: 'Dairy Management System', to: '/products/dairy-management' },
+          { title: 'Hospital Management System', to: '/products/hospital-management' },
+          { title: 'Industry Management System', to: '/products/industry-management' },
+          { title: 'Payroll Management System', to: '/products/payroll-management' },
           // { title: 'UI/UX', to: '/products/ui-ux' },
         ] 
       },
       { title: 'Our Team', icon: 'mdi-account-group', to: '/our-team' },
-      { title: 'Blogs', icon: 'mdi-post', to: '/blogs' },
+      // { title: 'Blogs', icon: 'mdi-post', to: '/blogs' },
       { title: 'Contact Us', icon: 'mdi-account-box', to: '/contact-us' }
     ]
   }), 

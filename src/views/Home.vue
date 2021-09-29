@@ -1,10 +1,20 @@
 <template>
   <div class="Home">
-    <div class="home-banner img-back">
-      <div class="home-banner-text white--text" :style="{ padding: padding == 'xs' ? '50px' : padding == 'sm' ? '80px' : padding == 'md' ? '100px' : '200px' }">
-        <div class="mb-5 banner-title" :style="{ fontSize: padding == 'xs' ? '30px' : padding == 'sm' ? '34px' : padding == 'md' ? '42px' : '50px' }">YOU DREAM<br>WE MAKE IT HAPPEN</div>
+    <div class="home-banner">
+      <!-- <div class="home-banner-text white--text" :style="{ padding: padding == 'xs' ? '50px' : padding == 'sm' ? '80px' : padding == 'md' ? '100px' : '200px' }">
+        <div class="mb-5 banner-title" :style="{ fontSize: padding == 'xs' ? '30px' : padding == 'sm' ? '34px' : padding == 'md' ? '42px' : '50px' }">
+          ENABLING TECHNOLOGY <br> TO TRANSFORM
+        </div>
         <v-btn color="primary" large rounded max-width="300" @click="() => this.$store.commit('SET_REQUEST_QUOTE', true)">get a free consultation</v-btn>
-      </div>
+      </div> -->
+      <v-carousel :show-arrows="true" :cycle="true" hide-delimiters height="100%">
+        <v-carousel-item v-for="(item, i) in slides" :key="i" :src="item.img">
+          <div style="height: 100%; width: 100%; background-color: rgb(0 0 0 / 50%);" class="d-flex flex-column justify-center align-center text-center white--text pa-3">
+            <div class="display-1 mb-0 mb-md-2">{{ item.title }}</div>
+            <div>{{ item.desc }}</div>
+          </div>
+        </v-carousel-item>
+      </v-carousel>
     </div>
   
     <!-- Who we are -->
@@ -30,7 +40,7 @@
     </div>
 
     <!-- Our Memories -->
-    <div class="py-6 pb-sm-8 pb-md-11 pb-lg-14" style="min-height: 30vh;">
+    <!-- <div class="py-6 pb-sm-8 pb-md-11 pb-lg-14" style="min-height: 30vh;">
       <v-container> 
         <div class="mb-4 d-flex justify-space-between">
           <div style="font-size: 25px; font-weight: 500;">Some of Our Memories</div>
@@ -45,7 +55,7 @@
           </v-col>
         </v-row>
       </v-container>
-    </div>
+    </div> -->
     <!-- Home Services -->
     <div class="py-6 pb-sm-8 pb-md-11 pb-lg-14">
       <v-container> 
@@ -89,7 +99,7 @@
     <!-- Our Team -->
     <div class="pb-6 pb-sm-8 pb-md-11 pb-lg-14">
       <v-container>
-        <h1 style="line-height: 1;">Meet our Technical Experts and Leaders</h1>
+        <h1 style="line-height: 1;">Our Management Team</h1>
         <div class="grid mt-4">
           <v-hover v-slot="{ hover }" v-for="(m, a) in teams" :key="a">
             <div class="img-div" :style="{ backgroundImage: `url(${m.image})` }" @click.stop="openCard(m)">
@@ -112,7 +122,7 @@
       </v-container>
     </div>
     <!-- Blogs -->
-    <div class="pb-6 pb-sm-8 pb-md-11 pb-lg-14" style="min-height: 30vh;">
+    <!-- <div class="pb-6 pb-sm-8 pb-md-11 pb-lg-14" style="min-height: 30vh;">
       <v-container>
         <div class="mb-4 d-flex justify-space-between">
           <div style="font-size: 25px; font-weight: 500;">Read Our Latest Posts</div>
@@ -133,7 +143,7 @@
           </v-col>
         </v-row>
       </v-container>
-    </div>
+    </div> -->
 
     <v-dialog v-model="dialog" max-width="600px" transition="dialog-transition">
       <div class="white pa-3 pa-sm-4 pa-md-5 pa-lg-6">
@@ -174,13 +184,14 @@ export default {
       { title: 'On Demand App', img: require('@/assets/icons/demand.png'), to: '/services/on-demand-app' }
     ],
     products: [
-      { title: 'Agram Digital Pathology', img: require('../assets/icons/digital-pathology.png'), desc:'Developed by a team of specialized engineers and pathologist. Anatomical pathology procedures management system. Processes the whole workflow. Digitalize your lab.', to: '/products/agram-lab' },
-      { title: 'Dairy Management', img: require('../assets/icons/dairy-mgmt.png'), desc:'Centrally controlled Web-Application manages all other aspects of a complete accounting software with detailed options for milk procurement billing, deductions, incentives and commissions.', to: '/products/dairy-management' },
-      { title: 'Health Post Management', img: require('../assets/icons/hospital-mgmt.png'), desc:'Health Post Management Software improves quality of care and, ultimately, patient experience by optimizing the coordination of care across a hospital, practice, or ancillary care clinic.', to: '/products/hospital-management' },
-      { title: 'Industry Management', img: require('../assets/icons/industry.jpg'), desc:'An advanced software application that works as a comprehensive and one stop solution for all your business development needs', to: '/products/industry-management' },
-      { title: 'Payroll Management', img: require('../assets/icons/payroll-mgmt.png'), desc:'With Payroll Management, time tracking, and HCM in one payroll management system, it’s easier than ever to flexibly manage your processes and pay your workforce with confidence.', to: '/products/payroll-management' },
-      { title: 'UI & UX Design', img: require('../assets/icons/ui.png'), desc:'Design interactive prototypes for Android, iOS, Web and Desktop as per your business demand. Customised user interface which includes designing, prototyping, animating, and sharing user experiences.', to: '/products/ui-ux' }
+      { title: 'Agram Lab (Pathology)', img: require('../assets/icons/digital-pathology.png'), desc:'Developed by a team of specialized engineers and pathologists. Anatomical pathology procedures management system processes the whole workflow and digitalizes your lab.', to: '/products/agram-lab' },
+      { title: 'Dairy Management System', img: require('../assets/icons/dairy-mgmt.png'), desc:'Centrally controlled Web-Application manages all aspects of a complete accounting software with detailed options for milk procurement billings, deductions, incentives and commissions.', to: '/products/dairy-management' },
+      { title: 'Health Post Management System', img: require('../assets/icons/hospital-mgmt.png'), desc:'Health Post Management Software improves quality of care and, ultimately, patient experience by optimizing the coordination of care across the health posts, practices, or ancillary care clinics.', to: '/products/hospital-management' },
+      { title: 'Industry Management System', img: require('../assets/icons/industry.jpg'), desc:'An advanced software application that works as a comprehensive and one stop solution for all your business development needs', to: '/products/industry-management' },
+      { title: 'Payroll Management System', img: require('../assets/icons/payroll-mgmt.png'), desc:'With Payroll Management System, time tracking, and Human Capital Management (HCM) in one payroll management system, it’s easier than ever to flexibly manage your processes and pay your workforce with confidence.', to: '/products/payroll-management' },
+      // { title: 'UI & UX Design', img: require('../assets/icons/ui.png'), desc:'Design interactive prototypes for Android, iOS, Web and Desktop as per your business demand. Customised user interface which includes designing, prototyping, animating, and sharing user experiences.', to: '/products/ui-ux' }
     ],
+    slides: [],
     teams: [],
     gallery: [],
     blogs: [],
@@ -210,6 +221,8 @@ export default {
   },
   created () {
     this.get()
+    this.slides = this.products
+    this.slides.unshift({ title: 'Welcome to Agram Infotech', img: require('../assets/banner.png'), desc: '(Enabling Technology To Transform)' })
   },
   computed: {
     padding () {
@@ -231,7 +244,7 @@ export default {
 
 <style scoped>
 .home-banner {
-  background-image: url('../assets/banner.png');
+  /* background-image: url('../assets/banner.png'); */
   height: 90vh;
 }
 @media (max-width: 1250px) {
@@ -351,7 +364,7 @@ export default {
   transition: 250ms ease-in-out;
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   height: 300px;
   overflow: hidden;
 }

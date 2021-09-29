@@ -21,17 +21,19 @@
         </v-col>
       </v-row>
 
-      <div style="font-size: 25px; font-weight: 500;" class="mt-8 mb-5">Technologies we use to build Website</div>
-      <v-row class="mb-10">
+      <div style="font-size: 25px; font-weight: 500;" class="mt-8 mb-5 text-center">Technologies we use to build Website</div>
+      <!-- <v-row class="mb-10">
         <v-col cols="12" sm="6" md="4" v-for="(tech, t) in techs" :key="t">
           <div class="benefit pa-4">
             <img :src="tech.img">
-            <!-- <div class="my-2">{{ tech.title }}</div> -->
+            <div class="my-2">{{ tech.title }}</div>
             <div class="benefit-desc mt-3">{{ tech.desc }}</div>
           </div>
         </v-col>
-      </v-row>
-
+      </v-row> -->
+    </v-container>
+    <Techs :techs="techs" />
+    <v-container>
       <ContactForm title="Let's Discuss About Your Project" />
     </v-container>
   </div>
@@ -68,12 +70,12 @@ export default {
       { title: 'B2B & B2C Web Development', desc: 'We understand that the design of your B2C & b2c website can help guide users toward becoming new customers. We are experienced in designing websites for B2C & B2c clients of all types, from local businesses to international corporations.', img: require('@/assets/icons/b2b.png') }
     ],
     techs: [
-      { title: 'React JS', img: require('@/assets/techs/react.png'), desc: 'We develop extra ordinary website using most popular and well known front-end frameworks. React.js is especially useful in the development of user interface for the website applications.' },
-      { title: 'Angular', img: require('@/assets/techs/angular.png'), desc: 'Angular is a Type Script-based, open-source, front end mobile and web application framework which is great for handling your Web Pages. We use Angular.js in our toolkit for developing websites.' },
-      { title: 'PHP', img: require('@/assets/techs/php.png'), desc: 'PHP is a broadly used scripting language that is particularly suited for web development. Our PHP Website development service includes Designing, Database design, developing the site structure, testing, and production.' },
-      { title: 'WordPress', img: require('@/assets/techs/wordpress.png'), desc: 'Acquire fully efficient attractive & impressive WordPress websites for your business with our WordPress website development services.' },
-      { title: 'Laravel', img: require('@/assets/techs/laravel.png'), desc: 'If you are looking to take care of the back-end e-commerce web development tools, Laravel is one of the tools that are an absolute must in your toolkit for high quality website.' },
-      { title: 'Node JS', img: require('@/assets/techs/node.png'), desc: 'Node.js is definitely the foremost when you are looking to build a lightweight, yet highly systematic website. It is used for non-blocking, event-driven servers for websites and back-end API.' },
+      { title: 'React JS', color: 'backgroundColor: rgba(128 222 234 / 10%);', img: require('@/assets/techs/react.png'), desc: 'We develop extra ordinary website using most popular and well known front-end frameworks. React.js is especially useful in the development of user interface for the website applications.' },
+      { title: 'Angular', color: 'backgroundColor: rgba(183 28 28 / 10%);', img: require('@/assets/techs/angular.png'), desc: 'Angular is a Type Script-based, open-source, front end mobile and web application framework which is great for handling your Web Pages. We use Angular.js in our toolkit for developing websites.' },
+      { title: 'PHP', color: 'backgroundColor: rgba(141 108 158 / 10%);', img: require('@/assets/techs/php.png'), desc: 'PHP is a broadly used scripting language that is particularly suited for web development. Our PHP Website development service includes Designing, Database design, developing the site structure, testing, and production.' },
+      { title: 'WordPress', color: 'backgroundColor: rgba(1 87 155 / 10%);', img: require('@/assets/techs/wordpress.png'), desc: 'Acquire fully efficient attractive & impressive WordPress websites for your business with our WordPress website development services.' },
+      { title: 'Laravel', color: 'backgroundColor: rgba(232 42 57 / 10%);', img: require('@/assets/techs/laravel.png'), desc: 'If you are looking to take care of the back-end e-commerce web development tools, Laravel is one of the tools that are an absolute must in your toolkit for high quality website.' },
+      { title: 'Node JS', color: 'backgroundColor: rgba(55 71 79 / 10%);', img: require('@/assets/techs/node.png'), desc: 'Node.js is definitely the foremost when you are looking to build a lightweight, yet highly systematic website. It is used for non-blocking, event-driven servers for websites and back-end API.' },
     ]
   })
 }
