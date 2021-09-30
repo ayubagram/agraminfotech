@@ -3,29 +3,29 @@
     <div class="banner">
       <div class="banner-text d-flex justify-center align-center text-center px-3">
         <div class="display-1">On Demand App Development Services and Solutions</div>
-        <div class="mt-3 mb-5">We provide a robust on-demand app development technology platform to launch custom apps for any on-demand business.</div>
+        <p class="mt-3 mb-5">We provide a robust on-demand app development technology platform to launch custom apps for any on-demand business.</p>
         <v-btn large rounded color="primary" @click="() => this.$store.commit('SET_REQUEST_QUOTE', true)">get a free consultation</v-btn>
       </div>
     </div>
     <v-container>
       <div style="font-size: 25px; font-weight: 500;" class="my-4">Why Agram Infotech for On-demand app development services</div>
-      <div class="contents pb-3" v-for="(content, c) in contents" :key="c"> <span v-show="c > 0"></span>{{ content }}</div>
+      <p class="contents" v-for="(content, c) in contents" :key="c"> <span v-show="c > 0" />{{ content }}</p>
       <div style="font-size: 25px; font-weight: 500;" class="mt-8 mb-3">Next-generation on-demand app development Solutions</div>
-      <div class="mb-5">Agra Infotech is a globally identified on-demand app development solutions provider that institutes your business and desires the infinite prospect of mobility solutions.</div>
+      <p class="mb-5">Agra Infotech is a globally identified on-demand app development solutions provider that institutes your business and desires the infinite prospect of mobility solutions.</p>
       <v-row>
         <v-col cols="12" sm="12" md="6" v-for="(service, t) in services" :key="t">
-          <div class="service d-flex align-center pa-4">
+          <div class="service d-flex flex-column align-center pa-4">
             <img :src="service.img">
             <div class="ml-3">
-              <div style="font-size: 22px; font-weight: 500;">{{ service.title }}</div>
-              <div class="mt-2">{{ service.desc }}</div>
+              <div style="font-size: 20px; font-weight: 500;">{{ service.title }}</div>
+              <p class="mt-2">{{ service.desc }}</p>
             </div>
           </div>
         </v-col>
       </v-row>
 
       <div style="font-size: 25px; font-weight: 500;" class="mt-8 mb-3">Technologies - The pillar of Our Every App</div>
-      <div class="mb-5">We select the prime and newest from the technology repository to create a demand application. Then, associating with the best technology providers and examining the newest trends, our expert on-demand app developers oversee brainwave sessions to decide how the application will function and what resources will be required to create a successful and flawless demand mobile app.</div>
+      <p class="mb-5">We select the prime and newest from the technology repository to create a demand application. Then, associating with the best technology providers and examining the newest trends, our expert on-demand app developers oversee brainwave sessions to decide how the application will function and what resources will be required to create a successful and flawless demand mobile app.</p>
       
       <!-- <v-row class="mb-10">
         <v-col cols="12" sm="6" md="4" v-for="(tech, t) in techs" :key="t">

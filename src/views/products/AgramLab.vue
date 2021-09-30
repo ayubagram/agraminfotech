@@ -1,19 +1,17 @@
 <template>
   <div class="mb-5">
     <div class="banner" />
-    <v-container class="mt-5">
-      <div :class="screen" class="text-center">Agram Digital Laboratory</div>
-      <p  class="mt-5 font-weight-thin text-justify" :style="{ fontSize: font }">
+    <v-container class="mt-5 text-center">
+      <div style="font-size: 25px; font-weight: 500;">Agram Digital Laboratory</div>
+      <p class="mt-2 mt-sm-3 mt-md-4">
         Web-based software that helps improve patient experience, streamlines operations
         with lab automation and empowers you to take business decisions faster.
         Drop the conventional ways and turn digital, maintain your patients' account and all
         related information and manage it through this laboratory information system for fast,
         simpler and precise operations.
       </p>
-    </v-container>
-    <v-container class="text-center">
-      <div class="display-2"> Overview</div>
-      <p class="mt-5" align="justify" style="font-size: 20px">
+      <div style="font-size: 25px; font-weight: 500;" class="mt-5 mt-sm-6 mt-md-7 mt-lg-8"> Overview</div>
+      <p class="mt-2 mt-sm-3 mt-md-4">
         Agram Digital Laboratory is one of the best LIMS software which takes down all the operation quickly and precisely. Developed by a team of specialized engineers and pathologist it simplifies the workflow of your laboratory operation.
         Switching to it would ease down the management of Patient Information, Appointment, Diagnostic and assures reliability and security.
         This LIS system provides UI and support in English for a global acceptance.<br><br>
@@ -22,7 +20,7 @@
     </v-container>
     <div class="primary white--text mt-6 mt-sm-8 mt-md-11 mt-lg-14 py-6 py-sm-8 py-md-11 py-lg-14">
       <v-container>
-        <h1 class="mb-3">Key Features</h1>
+        <div class="mb-3" style="font-size: 25px; font-weight: 500;">Key Features</div>
         <ul class="b">
           <v-row>
             <v-col cols="12" sm="6" md="4" v-for="(f, i) in features" :key="i">
@@ -32,12 +30,12 @@
         </ul>
       </v-container>
     </div>
-    <div class="text-center mt-10 mb-4">Technology Stack</div>
+    <div class="text-center mt-10 mb-4" style="font-size: 25px; font-weight: 500;">Technology Stack</div>
     <Techs :techs="techs" />
     <div class="grey lighten-4 mt-6 mt-sm-8 mt-md-11 mt-lg-14 py-6 py-sm-8 py-md-11 py-lg-14">
       <v-container>
-        <h1 class="mb-3">Client's Feedback</h1>
-        <p style="font-style:italic; font-size: 25px">
+        <div style="font-size: 25px; font-weight: 500;" class="mb-3">Client's Feedback</div>
+        <p style="font-style:italic;">
           "Agram Infotech showcased great execution and communication on a project involving many stakeholders.
           I’d work with them again and would highly recommend them to get the job done."<br>
           <b>- C.E.O, Medilanee Diagnostics & Research Centre</b>
@@ -113,8 +111,4 @@ export default {
 
 <style>
 .banner { background-image: url('../../assets/products/img1.png'); }
-ul.b {
-  list-style-type: square;
-  font-size: large;
-}
 </style>

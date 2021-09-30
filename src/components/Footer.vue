@@ -54,7 +54,7 @@ export default {
     products: [
       { title: 'Agram Lab (Pathology)', to: '/products/agram-lab' },
       { title: 'Dairy Management System', to: '/products/dairy-management' },
-      { title: 'Hospital Management System', to: '/products/hospital-management' },
+      { title: 'Health Post Management System', to: '/products/health-post-management' },
       { title: 'Industry Management System', to: '/products/industry-management' },
       { title: 'Payroll Management System', to: '/products/payroll-management' },
       // { title: 'UI/UX', to: '/products/ui-ux' }

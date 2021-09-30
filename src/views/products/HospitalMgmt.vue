@@ -1,17 +1,15 @@
 <template>
   <div class="mb-5">
     <div class="banner" />
-    <v-container class="mt-5">
-      <div class="display-4 text-center">Health Post Management</div>
-      <p  class="mt-5 font-weight-thin text-justify" style="font-size: 25px;">
+    <v-container class="mt-5 text-center">
+      <div style="font-size: 25px; font-weight: 500;">Health Post Management</div>
+      <p class="mt-2 mt-sm-3 mt-md-4">
         Health Post Management streamlines and integrates the operations, processes and information flow in hospitals and is designed to manage all
         the aspects of hospitals in a single platform. It combines all the information related to patients, doctors, staff,
         hospital administration into one software.
       </p>
-    </v-container>
-    <v-container class="text-center mt-10">
-      <div class="display-2"> Overview</div>
-      <p class="mt-5" align="justify" style="font-size: 20px">
+      <div style="font-size: 25px; font-weight: 500;" class="mt-5 mt-sm-6 mt-md-7 mt-lg-8">Overview</div>
+      <p class="mt-2 mt-sm-3 mt-md-4">
         Health Post Management system automates the clinic’s work and optimizes the utilization of resources
         instead of only the storage and presentation of the information. It balances the occupancy rates and
         calculates the number of required employees. Automation helps to manage the general process, deals with
@@ -27,7 +25,7 @@
     </v-container>
     <div class="primary white--text mt-6 mt-sm-8 mt-md-11 mt-lg-14 py-6 py-sm-8 py-md-11 py-lg-14">
       <v-container>
-        <h1 class="mb-3">Key Features</h1>
+        <div class="mb-3" style="font-size: 25px; font-weight: 500;">Key Features</div>
         <ul class="b">
           <v-row>
             <v-col cols="12" sm="6" md="4" v-for="(f, i) in features" :key="i">
@@ -37,17 +35,8 @@
         </ul>
       </v-container>
     </div>
-    <v-container class="text-center mt-10">
-      <h1 class="mb-4">Technology Stack</h1>
-      <v-row>
-        <v-col cols="12" sm="6" md="4" v-for="(tech, t) in techs" :key="t">
-          <div class="benefit pa-4">
-            <img :src="tech.img">
-            <div class="benefit-desc mt-3">{{ tech.desc }}</div>
-          </div>
-        </v-col>
-      </v-row>
-    </v-container>
+    <div class="text-center mt-10 mb-4" style="font-size: 25px; font-weight: 500;">Technology Stack</div>
+    <Techs :techs="techs" />
     <!--    <div class="grey lighten-4 mt-6 mt-sm-8 mt-md-11 mt-lg-14 py-6 py-sm-8 py-md-11 py-lg-14">
           <v-container>
             <h1 class="mb-3">Client's Feedback</h1>
@@ -98,9 +87,9 @@ export default {
         ['Laboratory and Tests Management', 'Reporting', '24 X 7 Customer Support', 'High-Level Customisation']
       ],
       techs: [
-        { title: 'CSS3', img: require('@/assets/techs/css3.png'), desc: 'We develop extra ordinary website using most popular and well known front-end frameworks. React.js is especially useful in the development of user interface for the website applications.' },
-        { title: 'HTML5', img: require('@/assets/techs/html5.png'), desc: 'Angular is a Type Script-based, open-source, front end mobile and web application framework which is great for handling your Web Pages. We use Angular.js in our toolkit for developing websites.' },
-        { title: 'Java', img: require('@/assets/techs/java.png'), desc: 'PHP is a broadly used scripting language that is particularly suited for web development. Our PHP Website development service includes Designing, Database design, developing the site structure, testing, and production.' },
+        { title: 'CSS3', color: 'backgroundColor: rgb(2 119 189 / 10%);', img: require('@/assets/techs/css3.png'), desc: 'We develop extra ordinary website using most popular and well known front-end frameworks. React.js is especially useful in the development of user interface for the website applications.' },
+        { title: 'HTML5', color: 'backgroundColor: rgb(230 81 0 / 10%);', img: require('@/assets/techs/html5.png'), desc: 'Angular is a Type Script-based, open-source, front end mobile and web application framework which is great for handling your Web Pages. We use Angular.js in our toolkit for developing websites.' },
+        { title: 'Java', color: 'backgroundColor: rgb(85 84 255 / 10%);', img: require('@/assets/techs/java.png'), desc: 'PHP is a broadly used scripting language that is particularly suited for web development. Our PHP Website development service includes Designing, Database design, developing the site structure, testing, and production.' },
       ]
     }
   },
@@ -109,8 +98,4 @@ export default {
 
 <style>
 .banner { background-image: url('../../assets/products/img7.png'); }
-ul.b {
-  list-style-type: square;
-  font-size: large;
-}
 </style>

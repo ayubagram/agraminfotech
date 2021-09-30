@@ -1,15 +1,15 @@
 <template>
   <div>
     <v-container>
-      <div style="font-size: 40px; font-weight: 500;" class="mb-5 text-center">Our Recent Works</div>
+      <div style="font-size: 25px; font-weight: 500;" class="mb-5 text-center">Our Recent Works</div>
       <v-row>
         <v-col cols="12" sm="6" md="4" v-for="(product, t) in products" :key="t">
           <v-hover v-slot="{ hover }">
             <div class="portfolio white" @click="goto(product.to)" :style="{ backgroundImage: `url(${product.img})` }">
               <v-expand-transition>
                 <div v-if="hover" class="transition-fast-in-fast-out portfolio-reveal pa-4 white--text" style="height: 100%; background-color: rgba(0, 0, 0, .5);">
-                  <div class="display-1">{{ product.title }}</div>
-                  <div class="text-justify mt-2">{{ product.desc }}</div>
+                  <div style="font-size: 25px; font-weight: 500;">{{ product.title }}</div>
+                  <p class="mt-2">{{ product.desc }}</p>
                 </div>
               </v-expand-transition>
             </div>
@@ -21,7 +21,7 @@
       <v-container>
         <v-row>
           <v-col cols="12" sm="6">
-            <h1>Providing Disruptive Business Solutions for Your Enterprise</h1>
+            <div style="font-size: 25px; font-weight: 500;">Providing Disruptive Business Solutions for Your Enterprise</div>
             <v-btn class="mt-4" large rounded color="primary" @click="() => this.$store.commit('SET_REQUEST_QUOTE', true)">get a free consultation</v-btn>
           </v-col>
           <v-col cols="12" sm="6">
@@ -32,7 +32,7 @@
         </v-row>
       </v-container>
     </div>
-    <h1 class="text-center mt-10 mb-6">Technology We Work With</h1>
+    <div style="font-size: 25px;font-weight: 500;" class="text-center mt-10 mb-6">Technology We Work With</div>
     <Techs :techs="technology" />
     <div class="mt-5">
       <ContactForm title="Let's Discuss About Your Project" />

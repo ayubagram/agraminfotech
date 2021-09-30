@@ -64,6 +64,17 @@ iframe {
   padding: 12px !important;
 }
 
+p {
+  font-size: 14px;
+  text-align: justify;
+  letter-spacing: .5px;
+}
+ul.b {
+  list-style-type: square;
+  font-size: 14px;
+  letter-spacing: .5px;
+}
+
 /* Three Line grid */
 .three__line__grid {
   display: grid;
@@ -140,11 +151,12 @@ iframe {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .25);
 }
 .dm-title {
-  font-size: 22px; 
+  font-size: 20px; 
   line-height: 1.25;
   font-weight: 500;
 }
 .dm-desc { 
+  font-size: 14px;
   line-height: 1.4;
   text-align: justify;
 }

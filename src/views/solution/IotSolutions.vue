@@ -2,18 +2,18 @@
   <div class="IoTSolutions">
     <div class="banner">
       <div class="banner-text d-flex justify-center align-center text-center px-3">
-        <div class="display-1">IoT in Agriculture Sector: Smart Farming Solution</div>
-        <div class="mt-3 mb-5">Increase productivity and enhance operational efficiency with IoT-enabled Custom-tailored Smart Farming solutions with Agram.</div>
+        <div style="font-size: 25px; font-weight: 500;">IoT in Agriculture Sector: Smart Farming Solution</div>
+        <p class="mt-3 mb-5">Increase productivity and enhance operational efficiency with IoT-enabled Custom-tailored Smart Farming solutions with Agram.</p>
         <v-btn large rounded color="primary" @click="() => this.$store.commit('SET_REQUEST_QUOTE', true)">request a free consultation</v-btn>
       </div>
     </div>
     <v-container>
       <div style="font-size: 25px; font-weight: 500;" class="my-4 text-center ">Smart Farming Solution</div>
-      <div class="text-justify">
+      <p>
         IoT-based smart farming system helps to monitor the agricultural land with the help of sensors and automate the irrigation process. The farmers can monitor the conditions of the field from anywhere, such as soil moisture and humidity.
         It makes precision farming possible and results in high quality and quantity production of crops and healthy cattle. Smart farming System implements hardware (Sensors/Devices) and software (IoT platforms) to capture the data and give
         actionable reports to manage all the operations on the farm, both pre and post-harvest.
-      </div>
+      </p>
       <div style="font-size: 25px; font-weight: 500;" class=" my-4 text-center mt-4">Work Flow of Smart Farming Solution </div>
       <v-img src="../../assets/smart-agriculture.webp"></v-img>
       <div style="font-size: 25px; font-weight: 500;" class="py-4 text-center">Applications of IoT Technology for Agriculture Sector</div>
@@ -24,8 +24,8 @@
               <div class="sol-img" :style="{ backgroundImage: `url(${service.img})` }" />
             </v-col>
             <v-col cols="12" sm="12" md="6">
-              <div class="display-1 mb-2">{{ service.title }}</div>
-              <div style="font-size: 20px; font-weight: 300;">{{ service.desc }}</div>
+              <div style="font-size: 25px; font-weight: 500;" class="mb-2">{{ service.title }}</div>
+              <p>{{ service.desc }}</p>
             </v-col>
           </v-row>
         </div>
@@ -34,12 +34,11 @@
         </div>
       </div>
       <div style="font-size: 25px; font-weight: 500;" class="my-4 text-center">Agram IoT Farming Solution</div>
-      <div class="text-justify mb-8">
-        At Agram Infotech, we enable Smart Farming Solution with the help of IoT technology to help farmers save water. Our technologies are most prominently used at the pre-stage. With the use of agricultural drones and a weather condition tracking system, we empower farmers to decide what to crop for the specific season to increase the yield.<br>
-        <br>
+      <div class="mb-8">
+        <p>At Agram Infotech, we enable Smart Farming Solution with the help of IoT technology to help farmers save water. Our technologies are most prominently used at the pre-stage. With the use of agricultural drones and a weather condition tracking system, we empower farmers to decide what to crop for the specific season to increase the yield.</p> <br>
         With our IoT enabled Smart Farming Solutions, Farmer can:
         <div>
-          <ul>
+          <ul class="b">
             <li v-for="(a, i) in as" :key="i">{{ a }}</li>
           </ul>
         </div>

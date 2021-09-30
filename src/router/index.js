@@ -53,11 +53,11 @@ const routes = [
     component: () => import('@/views/products/Products'),
     redirect: '/products/agram-lab',
     children: [
-      { path: 'agram-lab', name: 'Agram Digital Lab', component: () => import('@/views/products/AgramLab') },
-      { path: 'dairy-management', name: 'Dairy Management', component: () => import('@/views/products/DairyMgmt') },
-      { path: 'hospital-management', name: 'Hospital Management', component: () => import('@/views/products/HospitalMgmt') },
-      { path: 'industry-management', name: 'Industry Management', component: () => import('@/views/products/IndustryMgmt') },
-      { path: 'payroll-management', name: 'Payroll Management', component: () => import('@/views/products/PayrollMgmt') },
+      { path: 'agram-lab', name: 'Agram Lab (Pathology)', component: () => import('@/views/products/AgramLab') },
+      { path: 'dairy-management', name: 'Dairy Management System', component: () => import('@/views/products/DairyMgmt') },
+      { path: 'health-post-management', name: 'Health Post Management System', component: () => import('@/views/products/HospitalMgmt') },
+      { path: 'industry-management', name: 'Industry Management System', component: () => import('@/views/products/IndustryMgmt') },
+      { path: 'payroll-management', name: 'Payroll Management System', component: () => import('@/views/products/PayrollMgmt') },
       { path: 'ui-ux', name: 'UI & UX Design', component: () => import('@/views/products/UiDesign') },
     ]
   },

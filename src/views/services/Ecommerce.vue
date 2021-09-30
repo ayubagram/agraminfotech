@@ -2,14 +2,14 @@
   <div class="Ecommerce">
     <div class="banner">
       <div class="banner-text d-flex justify-center align-center text-center px-3">
-        <div class="display-1">Uplift Your eCommerce Business with Agram Infotech</div>
-        <div class="mt-3 mb-5">We provide comprehensive Solutions for your eCommerce needs </div>
+        <div style="font-size: 25px; font-weight: 500;">Uplift Your eCommerce Business with Agram Infotech</div>
+        <p class="mt-3 mb-5">We provide comprehensive Solutions for your eCommerce needs </p>
         <v-btn large rounded color="primary" @click="() => this.$store.commit('SET_REQUEST_QUOTE', true)">get a free consultation</v-btn>
       </div>
     </div>
     <v-container>
       <div style="font-size: 25px; font-weight: 500;" class="my-4">Why Choose Agram eCommerce Development Services</div>
-      <div class="contents pb-3" v-for="(content, c) in contents" :key="c"> <span v-show="c > 0"></span>{{ content }}</div>
+      <p class="contents" v-for="(content, c) in contents" :key="c"> <span v-show="c > 0" />{{ content }}</p>
       <div style="font-size: 25px; font-weight: 500;" class="mt-8 mb-5">Our eCommerce Development Expertise:</div>
       <v-row class="mb-10">
         <v-col cols="12" sm="6" md="4" v-for="(service, t) in services" :key="t">

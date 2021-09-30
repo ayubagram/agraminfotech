@@ -10,7 +10,7 @@
     </div>
     <v-container>
       <div style="font-size: 25px; font-weight: 500;" class="my-4">Why Agram Infotech for Digital Marketing Services</div>
-      <div class="contents pb-3" v-for="(content, c) in contents" :key="c"> <span v-show="c > 0"></span>{{ content }}</div>
+      <p class="contents" v-for="(content, c) in contents" :key="c"> <span v-show="c > 0" />{{ content }}</p>
       <div style="font-size: 25px; font-weight: 500;" class="mt-8 mb-5">Agram’s Digital Marketing Services</div>
       <v-row class="mb-10">
         <v-col cols="12" sm="6" md="4" v-for="(service, t) in services" :key="t">
@@ -21,7 +21,6 @@
           </div>
         </v-col>
       </v-row>
-
       <ContactForm title="Let's Discuss About Your Project" />
     </v-container>
   </div>

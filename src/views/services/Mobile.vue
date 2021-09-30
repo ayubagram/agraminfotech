@@ -2,14 +2,14 @@
   <div class="Mobile">
     <div class="banner">
       <div class="banner-text d-flex justify-center align-center text-center px-3">
-        <div class="display-1">Top-Notch Mobile App Development Company</div>
-        <div class="mt-3 mb-5" style="font-size: 18px;">Agram's mobile app developers leverages cutting-edge technology to build customer-driven mobile apps.</div>
+        <div style="font-size: 25px; font-weight: 500px;">Top-Notch Mobile App Development Company</div>
+        <p class="mt-3 mb-5">Agram's mobile app developers leverages cutting-edge technology to build customer-driven mobile apps.</p>
         <v-btn large rounded color="primary" @click="() => this.$store.commit('SET_REQUEST_QUOTE', true)">get a free consultation</v-btn>
       </div>
     </div>
     <v-container>
       <div style="font-size: 25px; font-weight: 500;" class="my-4">Why Agram Infotech for Mobile App Development Services</div>
-      <div class="contents pb-3" v-for="(content, c) in contents" :key="c"> <span v-show="c > 0"></span>{{ content }}</div>
+      <p class="contents" v-for="(content, c) in contents" :key="c"> <span v-show="c > 0" />{{ content }}</p>
       <div style="font-size: 25px; font-weight: 500;" class="mt-8 mb-5">Agram Infotech Key Services in App development</div>
       <v-row>
         <v-col cols="12" sm="6" md="4" v-for="(service, t) in services" :key="t">

@@ -7,7 +7,7 @@
         </div>
         <v-btn color="primary" large rounded max-width="300" @click="() => this.$store.commit('SET_REQUEST_QUOTE', true)">get a free consultation</v-btn>
       </div> -->
-      <v-carousel :show-arrows="true" :cycle="true" hide-delimiters height="100%">
+      <v-carousel :show-arrows="true" cycle :interval="10000" hide-delimiters height="100%">
         <v-carousel-item v-for="(item, i) in slides" :key="i" :src="item.img">
           <div style="height: 100%; width: 100%; background-color: rgb(0 0 0 / 50%);" class="d-flex flex-column justify-center align-center text-center white--text pa-3">
             <div class="display-1 mb-0 mb-md-2">{{ item.title }}</div>
