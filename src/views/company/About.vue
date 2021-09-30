@@ -6,7 +6,7 @@
       </v-col>
       <v-col cols="12" md="6">
         <div style="font-size: 25px; font-weight: 500;">About The Company</div>
-        <div class="mt-6" style="font-size: 18px;">
+        <div class="mt-6">
           Agram Infotech is a leading software company based in Birgunj, Nepal. Agram strives for developing intelligent and very cost effective softwares, apps, IoT and any customized softwares at client’s requests. Agram has highly skilled development team and focuses on quality, cost and timely delivering of any projects. <br><br>
           The company looks forward to working with you or for you.
         </div>
@@ -37,7 +37,7 @@ export default {
       'Focus on dependable, quality solutions',
       'Agile capabilities to support your needs',
       'Full-systems assessments'
-    ]
+    ],
   })
 }
 </script>

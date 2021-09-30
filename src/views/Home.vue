@@ -24,7 +24,7 @@
           <v-col cols="12" sm="12" md="6">
             <h1 style="line-height: 1;" class="mb-3">Who We Are</h1>
             <p align="justify">
-              Agram Infotech is a startup company based in Birgunj, Nepal. Agram strives for developing
+              Agram Infotech is a leading software company based in Birgunj, Nepal. Agram strives for developing
               intelligent and very cost effective software, apps, IoT and any customized software at a client’s request.
               Agram has highly skilled development team and focuses on quality, cost and timely delivering of any projects.
             </p>

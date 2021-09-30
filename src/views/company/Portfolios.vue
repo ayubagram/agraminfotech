@@ -33,7 +33,7 @@
       </v-container>
     </div>
     <h1 class="text-center mt-10 mb-6">Technology We Work With</h1>
-    <Techs :techs="services" />
+    <Techs :techs="technology" />
     <div class="mt-5">
       <ContactForm title="Let's Discuss About Your Project" />
     </div>
@@ -55,17 +55,6 @@ export default {
       { title: 'Industry Management System', img: require('../../assets/icons/industry.jpg'), desc:'An advanced software application that works as a comprehensive and one stop solution for all your business development needs', to: '/products/industry-management' },
       { title: 'Payroll Management System', img: require('../../assets/icons/payroll-mgmt.png'), desc:'With Payroll Management, time tracking, and HCM in one payroll management system, it’s easier than ever to flexibly manage your processes and pay your workforce with confidence.', to: '/products/payroll-management' },
       // { title: 'UI & UX Design', img: require('../../assets/icons/ui.png'), desc:'Design interactive prototypes for Android, iOS, Web and Desktop as per your business demand. Customised user interface which includes designing, prototyping, animating, and sharing user experiences.', to: '/products/ui-ux' }
-    ],
-    services: [
-      { title: 'HTML5', color: 'backgroundColor: rgb(230 81 0 / 10%);', img: require('@/assets/techs/html5.png')},
-      { title: 'CSS3', color: 'backgroundColor: rgb(2 119 189 / 10%);', img: require('@/assets/techs/css3.png')},
-      { title: 'Java', color: 'backgroundColor: rgb(68 91 255 / 10%);', img: require('@/assets/techs/java.png')},
-      { title: 'Vue.JS', color: 'backgroundColor: rgb(129 199 132 / 10%);', img: require('@/assets/techs/vue.png')},
-      { title: 'Node.JS', color: 'backgroundColor: rgb(55 71 79 / 10%);', img: require('@/assets/techs/node.png')},
-      { title: 'MySql', color: 'backgroundColor: rgb(68 121 161 / 10%);', img: require('@/assets/techs/mysql.png')},
-      { title: 'Android', color: 'backgroundColor: rgb(141 170 34 / 10%);', img: require('@/assets/techs/android.png')},
-      { title: 'Firebase', color: 'backgroundColor: rgb(255 111 0 / 10%);', img: require('@/assets/techs/firebase.png')},
-      { title: 'React.JS', color: 'backgroundColor: rgb(128 222 234 / 10%);', img: require('@/assets/techs/react.png')}
     ]
   }),
   methods: {
