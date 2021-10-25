@@ -1,6 +1,6 @@
 <template>
   <div class="Navbar">
-    <v-app-bar app color="white" elevate-on-scroll>
+    <v-app-bar app color="white" elevate-on-scroll height="64">
       <v-container class="d-flex px-0 px-lg-3">
         <div class="d-flex align-center" style="cursor: pointer;" @click="() => this.$router.push('/')">
           <v-img alt="Agram Logo" class="shrink mr-2" contain src="../assets/logo.png" transition="scale-transition" width="40" />
@@ -11,9 +11,9 @@
 
         <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="d-block d-sm-block d-md-none"></v-app-bar-nav-icon>
         <div class="main-menu d-none d-sm-none d-md-block">
-          <ul class="d-flex">
+          <!-- <ul class="d-flex">
             <li v-for="(item, i) in items" :key="i">
-              <v-btn color="primary" class="text-capitalize" style="font-weight: 400;" tile text :to="item.to" min-height="62">{{ item.title }}</v-btn>
+              <v-btn color="primary" class="text-capitalize" active-class="active__nav" tile text :to="item.to" min-height="62">{{ item.title }}</v-btn>
               <v-list class="list pa-0" v-if="item.children">
                 <v-list-item-group color="primary">
                   <v-list-item style="min-height: 60px;" v-for="(child, c) in item.children" :key="c" link :to="child.to">
@@ -22,12 +22,23 @@
                 </v-list-item-group>
               </v-list>
             </li>
-          </ul>
+          </ul> -->
+
+          <v-menu open-on-hover offset-y v-for="(item, i) in items" :key="i">
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn color="primary" dark v-bind="attrs" v-on="on" tile text :to="item.to" height="64">{{ item.title }}</v-btn>
+            </template>
+            <v-list v-if="item.children" class="py-0" dense width="250">
+              <v-list-item v-for="(link, l) in item.children" :key="l" :to="link.to">
+                <v-list-item-title v-text="link.title" />
+              </v-list-item>
+            </v-list>
+          </v-menu>
         </div>
       </v-container>
     </v-app-bar> 
 
-    <v-navigation-drawer color='primary' dark v-model="drawer" app disable-resize-watcher>
+    <v-navigation-drawer color='primary' dark v-model="drawer" disable-resize-watcher app mini-variant-width="10024">
       <v-list expand nav tile shaped>
         <div v-for="(item, i) in items" :key="i">
           <v-list-item :to="`${item.to}`" v-if="!item.children">
@@ -100,7 +111,7 @@ export default {
       // { title: 'Blogs', icon: 'mdi-post', to: '/blogs' },
       { title: 'Contact Us', icon: 'mdi-account-box', to: '/contact-us' }
     ]
-  }), 
+  }),
 }
 </script>
 

@@ -75,6 +75,12 @@ ul.b {
   letter-spacing: .5px;
 }
 
+/* Nav */
+.active__nav {
+  font-weight: 500 !important;
+  border-bottom: 3px solid yellow;
+}
+
 /* Three Line grid */
 .three__line__grid {
   display: grid;
