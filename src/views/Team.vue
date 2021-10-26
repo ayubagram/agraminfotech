@@ -1,4 +1,4 @@
-<template>
+<!--<template>
   <v-container>
     <div class="display-1 mb-4">Meet Our Team</div>
     <v-row>
@@ -24,6 +24,22 @@
       </v-col>
     </v-row>
   </v-container>  
+</template>-->
+
+<template>
+  <v-container>
+    <div class="display-1 mb-4">Meet Our Team</div>
+    <div class="teams">
+      <div class="team__card pa-4" v-for="(m, i) in members" :key="i">
+        <div style="height: 200px;">
+          <img :src="m.image" :alt="m.name">
+        </div>
+        <div>
+          <div class="title">{{ m.name }} <v-chip color="primary">{{ m.position }}</v-chip></div>
+        </div>
+      </div>
+    </div>
+  </v-container>
 </template>
 
 <script>
@@ -52,6 +68,14 @@ export default {
 </script>
 
 <style scoped>
+.teams {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(23%, 1fr));
+  grid-gap: 12px;
+}
+</style>
+
+<!--<style scoped>
 .team { 
   border-radius: 5px;
   border-top-right-radius: 35px;
@@ -62,4 +86,4 @@ export default {
   font-weight: 500;  
   line-height: 1;
 }
-</style>
+</style>-->
