@@ -34,7 +34,7 @@
     </div>
     <div style="font-size: 25px;font-weight: 500;" class="text-center mt-10 mb-6">Technology We Work With</div>
     <Techs :techs="technology" />
-    <div class="mt-5">
+    <div class="mt-8">
       <ContactForm title="Let's Discuss About Your Project" />
     </div>
   </div>

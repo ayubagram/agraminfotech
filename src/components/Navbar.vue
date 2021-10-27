@@ -1,6 +1,6 @@
 <template>
-  <div class="Navbar">
-    <v-app-bar app color="white" elevate-on-scroll height="64">
+  <div class="navbar">
+    <v-app-bar app color="white" elevate-on-scroll height="70">
       <v-container class="d-flex px-0 px-lg-3">
         <div class="d-flex align-center" style="cursor: pointer;" @click="() => this.$router.push('/')">
           <v-img alt="Agram Logo" class="shrink mr-2" contain src="../assets/logo.png" transition="scale-transition" width="40" />
@@ -11,24 +11,14 @@
 
         <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="d-block d-sm-block d-md-none"></v-app-bar-nav-icon>
         <div class="main-menu d-none d-sm-none d-md-block">
-          <!-- <ul class="d-flex">
-            <li v-for="(item, i) in items" :key="i">
-              <v-btn color="primary" class="text-capitalize" active-class="active__nav" tile text :to="item.to" min-height="62">{{ item.title }}</v-btn>
-              <v-list class="list pa-0" v-if="item.children">
-                <v-list-item-group color="primary">
-                  <v-list-item style="min-height: 60px;" v-for="(child, c) in item.children" :key="c" link :to="child.to">
-                    <v-list-item-content class="primary--text">{{ child.title }}</v-list-item-content>
-                  </v-list-item>
-                </v-list-item-group>
-              </v-list>
-            </li>
-          </ul> -->
-
           <v-menu open-on-hover offset-y v-for="(item, i) in items" :key="i">
             <template v-slot:activator="{ on, attrs }">
-              <v-btn color="primary" dark v-bind="attrs" v-on="on" tile text :to="item.to" height="64">{{ item.title }}</v-btn>
+              <v-btn height="70" v-bind="attrs" v-on="on" text active-class="active__nav_btn" tile :to="item.to">
+                <span>{{ item.title }}</span>
+                <v-icon right v-if="item.children">mdi-menu-down</v-icon>
+              </v-btn>
             </template>
-            <v-list v-if="item.children" class="py-0" dense width="250">
+            <v-list v-if="item.children" class="py-0" dense min-width="150">
               <v-list-item v-for="(link, l) in item.children" :key="l" :to="link.to">
                 <v-list-item-title v-text="link.title" />
               </v-list-item>
@@ -115,23 +105,15 @@ export default {
 }
 </script>
 
-<style scoped>
-ul {
-  margin: 0;
-  padding: 0 !important;
+<style>
+.navbar .theme--light.v-btn--active:hover::before, .nav .theme--light.v-btn--active::before { opacity: 0 !important; }
+.active__nav_btn {
+  border-bottom: 3px solid #1976d2;
+  color: #1976d2 !important;
+  font-weight: 500 !important;
 }
-ul li { list-style: none; }
-/* main menu */
-.main-menu ul .list { 
-  display: none; 
-  position: absolute;
-  flex-direction: column;
-  top: 65px;
-  min-width: 250px;
-  background-color: white;
-  box-shadow: 0 7px 15px 0 rgba(0, 0, 0, .25);
+.v-app-bar__nav-icon { 
+  -webkit-animation: none !important;
+  animation: none !important; 
 }
-.main-menu li:hover ul { display: flex; }
-.main-menu li:hover .list { display: block; }
-button { animation: none !important; }
 </style>

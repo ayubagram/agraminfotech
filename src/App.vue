@@ -7,8 +7,8 @@
     <v-main class="mb-10">
       <router-view :key="$route.path" />
     </v-main>
-    <RequestQuote />
     <Footer />
+    <RequestQuote />
   </v-app>
 </template>
 
@@ -56,6 +56,7 @@ iframe {
   width: 100%;
   height: 100%;
 }
+.v-toolbar__content { padding: 0 12px !important; }
 
 .container {
   max-width: 1250px !important;
@@ -73,12 +74,6 @@ ul.b {
   list-style-type: square;
   font-size: 14px;
   letter-spacing: .5px;
-}
-
-/* Nav */
-.active__nav {
-  font-weight: 500 !important;
-  border-bottom: 3px solid yellow;
 }
 
 /* Three Line grid */
