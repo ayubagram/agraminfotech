@@ -93,8 +93,7 @@ export default {
     },
     submit() {
       if(this.$refs.form.validate()) {
-        this.$store.dispatch({ type: 'sendMessage', form: this.form })
-        .then( () => this.$refs.form.reset())
+        this.$store.dispatch({ type: 'sendMessage', form: this.form }).then( () => this.$refs.form.reset())
       }
       this.close()
     }

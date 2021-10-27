@@ -37,7 +37,6 @@ export default {
     async get() {
       this.$store.commit('SET_OVERLAY', true)
       await this.$binding("members", db.collection('members').orderBy('createdAt'))
-      this.members.forEach( m => m['show'] = false)
       this.$store.commit('SET_OVERLAY', false)
     }
   },

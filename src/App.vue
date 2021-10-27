@@ -209,7 +209,6 @@ ul.b {
 }
 button {
   padding: 10px 30px;
-  /* background-color: teal; */
   animation: tween-color 3s infinite ease-in-out !important;
 }
 
