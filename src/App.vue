@@ -277,8 +277,17 @@ button {
 /* Media Quaries */
 @media (max-width: 960px) {
   .three__line__grid { grid-template-columns: repeat(auto-fit, minmax(48%, 1fr)); }
+  .benefits { grid-template-columns: repeat(auto-fit, minmax(23%, 1fr)); }
+  .jobs { grid-template-columns: repeat(auto-fill, minmax(48%, 1fr)); }
+}
+@media (max-width: 760px) {
+  .benefits { grid-template-columns: repeat(auto-fit, minmax(30%, 1fr)); }
 }
 @media (max-width: 660px) {
   .three__line__grid { grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); }
+  .jobs { grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); }
+}
+@media (max-width: 560px) {
+  .benefits { grid-template-columns: repeat(auto-fit, minmax(48%, 1fr)); }
 }
 </style>

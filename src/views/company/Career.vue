@@ -1,26 +1,24 @@
 <template>
   <v-container>
-    <div style="font-size: 25px; font-weight: 500;" class="mb-5">Benefits of Working With Us</div>
+    <div style="font-size: 25px; font-weight: 500;" class="mb-6 text-center">Benefits of Working With Us</div>
     <div class="benefits">
-      <div class="benfit d-flex flex-column align-center text-center pa-4" v-for="(b, i) in benefits" :key="i">
+      <div class="benfit d-flex flex-column align-center text-center px-3 py-5" v-for="(b, i) in benefits" :key="i">
         <img :src="b.img" :alt="b.title" height="80">
         <div style="font-size: 15px; font-weight: 500; margin-top: 8px; line-height: 1.25;" v-text="b.title" />
       </div>
     </div>
-    <div style="border-left: 2px solid red; background-color: rgb(289 83 80 / 10%);" class="mt-6 pa-3 red--text">We don't have any openings currently, please visit us again soon.</div>
-    <!-- <div style="font-size: 25px; font-weight: 500;" class="mt-8 mb-4">Available Opening Jobs</div>
-    <v-row>
-      <v-col cols="12" sm="6" md="4" v-for="(career, c) in careers" :key="c">
-        <div class="jobs d-flex">
-          <div class="jobs-img img-back" :style="{ backgroundImage: `url(${career.image})` }" />
-          <div class="pa-3" style="width: calc(100% - 120px);">
-            <div style="font-size: 20px; lin-height: 1.25; font-weight: 500;">{{ career.title }}</div>
-            <div class="my-1" style="line-height: 1.25;">Available :- {{ career.vacancy }}</div>
-            <div class="desc pc">{{ career.description }}</div>
-          </div>
+    <!-- <div style="border-left: 2px solid red; background-color: rgb(289 83 80 / 10%);" class="mt-6 pa-3 red--text">We don't have any openings currently, please visit us again soon.</div> -->
+    <div style="font-size: 25px; font-weight: 500;" class="mt-8 mb-4">Available Opening Jobs</div>
+    <div class="jobs">
+      <div class="job__item pa-4 pa-md-5 pa-lg-6" v-for="a in 5" :key="a">
+        <div class="job__title" style="line-height: 1.2; letter-spacing: .5px; font-weight: bold;">Front End Developer</div>
+        <div class="job__description pc my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero aspernatur voluptas ipsum excepturi impedit temporibus expedita quaerat ad, est voluptatem accusamus nostrum laboriosam ipsa deleniti dolores dolorum id porro perferendis!</div>
+        <div class="d-flex" style="grid-gap: 6px;">
+          <v-btn color="primary" elevation="0">apply</v-btn>
+          <v-btn color="secondary" elevation="0" outlined>view</v-btn>
         </div>
-      </v-col>
-    </v-row> -->
+      </div>
+    </div>
   </v-container>
 </template>
 
@@ -28,7 +26,7 @@
 import { db } from '@/firebase'
 export default {
   firestore: () => ({
-    careers: db.collection('jobs').orderBy('createdAt', 'desc')
+    careers: db.collection('jobs').where('status', '==', true).orderBy('createdAt', 'desc')
   }),
   data: () => ({
     benefits: [
@@ -47,39 +45,27 @@ export default {
 .benefits {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18%, 1fr));
-  grid-gap: 20px;
+  grid-gap: 12px;
 }
 .benfit {
   box-shadow: 0 4px 10px 0 rgb(0 0 0 / 10%);
+  border-radius: 4px;
 }
 .jobs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  grid-gap: 12px;
+}
+.job__item {
+  border-radius: 4px;
   overflow: hidden;
-  height: 18vh;
-  background-color: rgba(128, 128, 128, .05);
-  transition: ease-in-out 250ms;
-  cursor: pointer;
+  box-shadow: 0 2px 10px 0 rgb(0 0 0 / 10%);
 }
-.jobs:hover {
-  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .25);
-  border-radius: 15px;
-}
-.jobs-img {
-  width: 120px;
-  height: 100%;
-}
-.jobs .desc {
-  text-transform: capitalize;  
-  -webkit-line-clamp: 4;
-  font-size: 13px;
-  line-height: 1.4 !important;
-}
-@media (max-width: 960px) {
-  .benefits { grid-template-columns: repeat(auto-fit, minmax(23%, 1fr)); grid-gap: 12px; }
-}
-@media (max-width: 760px) {
-  .benefits { grid-template-columns: repeat(auto-fit, minmax(30%, 1fr)); grid-gap: 12px; }
-}
-@media (max-width: 560px) {
-  .benefits { grid-template-columns: repeat(auto-fit, minmax(48%, 1fr)); grid-gap: 12px; }
+.jobs button { animation: none !important; }
+.job__description {
+  -webkit-line-clamp: 3;
+  font-size: 13px; 
+  font-weight: 400; 
+  color: rgb(0 0 0 / 70%);
 }
 </style>

@@ -36,7 +36,7 @@ export default {
   methods: {
     async get() {
       this.$store.commit('SET_OVERLAY', true)
-      await this.$binding("members", db.collection('members').orderBy('createdAt'))
+      await this.$binding("members", db.collection('members').orderBy('createdAt', 'desc'))
       this.$store.commit('SET_OVERLAY', false)
     }
   },
@@ -52,8 +52,9 @@ export default {
   grid-gap: 12px;
 }
 .team__card {
-  border: .5px solid rgb(0 0 0 / 10%);
+  border: .5px solid #1976d24f;
   transition: 250ms ease-in-out;
+  border-radius: 4px;
 }
 .team__card .member__name {
   font-size: 18px;
