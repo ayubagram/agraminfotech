@@ -11,7 +11,7 @@
     <div style="font-size: 25px; font-weight: 500;" class="mt-8 mb-4">Available Opening Jobs</div>
     <div class="jobs">
       <div class="job__item pa-4 pa-md-5 pa-lg-6" v-for="(j, a) in jobs" :key="a">
-        <div class="job__title" style="line-height: 1.2; letter-spacing: .5px; font-weight: bold;">{{ j.title }}</div>
+        <div class="job__title text-capitalize" style="line-height: 1.2; letter-spacing: .5px; font-weight: bold;">{{ j.title }}</div>
         <div class="caption mt-2" style="line-height: 1;">Vacancy :- <b>{{ j.vacancy }}</b></div>
         <div class="caption my-1" style="line-height: 1;">Experiance :- <b>{{ j.experience }} yrs. / {{ j.level }}</b></div>
         <div class="job__description pc my-3">{{ j.description }}</div>

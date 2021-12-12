@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 const routes = [
+  // { path: '/webmail', redirect: 'https://agramcloud.com/webmail' },
   { path: '/', name: 'Home', component: () => import('@/views/Home') },
   // services
   { 
