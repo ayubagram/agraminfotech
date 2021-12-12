@@ -46,6 +46,8 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+.v-input__prepend-outer { display: none; }
+.v-input__icon.v-input__icon--prepend button, .v-input__icon--clear button { animation: none !important; }
 
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
