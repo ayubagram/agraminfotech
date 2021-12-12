@@ -10,15 +10,17 @@
     <!-- <div style="border-left: 2px solid red; background-color: rgb(289 83 80 / 10%);" class="mt-6 pa-3 red--text">We don't have any openings currently, please visit us again soon.</div> -->
     <div style="font-size: 25px; font-weight: 500;" class="mt-8 mb-4">Available Opening Jobs</div>
     <div class="jobs">
-      <div class="job__item pa-4 pa-md-5 pa-lg-6" v-for="a in 5" :key="a">
-        <div class="job__title" style="line-height: 1.2; letter-spacing: .5px; font-weight: bold;">Front End Developer</div>
-        <div class="job__description pc my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero aspernatur voluptas ipsum excepturi impedit temporibus expedita quaerat ad, est voluptatem accusamus nostrum laboriosam ipsa deleniti dolores dolorum id porro perferendis!</div>
+      <div class="job__item pa-4 pa-md-5 pa-lg-6" v-for="(j, a) in jobs" :key="a">
+        <div class="job__title" style="line-height: 1.2; letter-spacing: .5px; font-weight: bold;">{{ j.title }}</div>
+        <div class="caption mt-2" style="line-height: 1;">Vacancy :- <b>{{ j.vacancy }}</b></div>
+        <div class="caption my-1" style="line-height: 1;">Experiance :- <b>{{ j.experience }} yrs. / {{ j.level }}</b></div>
+        <div class="job__description pc my-3">{{ j.description }}</div>
         <div class="d-flex" style="grid-gap: 6px;">
-          <v-btn color="primary" elevation="0">apply</v-btn>
-          <v-btn color="secondary" elevation="0" outlined>view</v-btn>
+          <v-btn color="primary" elevation="0" @click.stop="apply">apply</v-btn>
         </div>
       </div>
     </div>
+    <div class="job__item text-center caption pa-3" v-if="jobs.length <= 0">No jobs available currently.</div>  
   </v-container>
 </template>
 
@@ -26,7 +28,7 @@
 import { db } from '@/firebase'
 export default {
   firestore: () => ({
-    careers: db.collection('jobs').where('status', '==', true).orderBy('createdAt', 'desc')
+    jobs: db.collection('jobs').where('status', '==', true).orderBy('createdAt', 'desc')
   }),
   data: () => ({
     benefits: [
@@ -37,14 +39,17 @@ export default {
       { title: 'Education & Training', img: require('@/assets/benefits/education.png') },
       { title: 'Relationships', img: require('@/assets/benefits/relationship.png') }
     ]
-  })
+  }),
+  methods: {
+    apply() { console.log('apply') }
+  }
 }
 </script>
 
 <style scoped>
 .benefits {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(18%, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(15%, 1fr));
   grid-gap: 12px;
 }
 .benfit {
@@ -63,7 +68,7 @@ export default {
 }
 .jobs button { animation: none !important; }
 .job__description {
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 5;
   font-size: 13px; 
   font-weight: 400; 
   color: rgb(0 0 0 / 70%);

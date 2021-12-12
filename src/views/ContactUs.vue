@@ -42,7 +42,7 @@
 export default {
   data: () => ({
     contacts: [
-      { icon: 'mdi-email', head: 'Email', title: 'info@agramcloud.com' },
+      { icon: 'mdi-email', head: 'Email', title: 'info@agraminfotech.com' },
       { icon: 'mdi-phone', head: 'Phone Number', title: '+977 9802057014' },
       { icon: 'mdi-map-marker', head: 'Address', title: 'Agram Infotech Pvt. Ltd Panitanki Birgunj, Nepal' }  
     ],  

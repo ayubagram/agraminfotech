@@ -66,7 +66,7 @@ export default {
       { title: 'Ecommerce', to: '/services/ecommerce' },
       { title: 'On Demand App', to: '/services/on-demand-app' }
     ],
-    contact: ['Agram Infotech Pvt. Ltd Panitanki Birgunj, Nepal', 'info@agramcloud.com', '+977 9802057014'],
+    contact: ['Agram Infotech Pvt. Ltd Panitanki Birgunj, Nepal', 'info@agraminfotech.com', '+977 9802057014'],
     socials: [
       { color: '#3b5998', icon: 'mdi-facebook', to: 'https://www.facebook.com/agraminfotechbirgunj/' },
       { color: '#00acee', icon: 'mdi-twitter', to: 'https://www.twitter.com/agraminfotech/' },

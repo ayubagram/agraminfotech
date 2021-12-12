@@ -68,7 +68,7 @@ export default {
     items: [
       { title: 'Agram Infotech Pvt. Ltd Panitanki Birgunj, Nepal', icon: 'mdi-map-marker' },
       { title: 'info@agraminfotech.com', icon: 'mdi-email' },
-      { title: '+977 98550 21475', icon: 'mdi-phone' }
+      { title: '+977 9802057014', icon: 'mdi-phone' }
     ],
     socials: [
       { color: '#3b5998', icon: 'mdi-facebook', to: 'https://www.facebook.com/agraminfotechbirgunj/' },
@@ -79,22 +79,14 @@ export default {
   }),
   computed: {
     dialog: {
-      get () {
-        return this.$store.state.request_quote
-      },
-      set (val) {
-        this.$store.commit('SET_REQUEST_QUOTE', val)
-      },
+      get () { return this.$store.state.request_quote },
+      set (val) { this.$store.commit('SET_REQUEST_QUOTE', val)},
     },
   },
   methods: {
-    close() {
-      this.$store.commit('SET_REQUEST_QUOTE', false)
-    },
+    close() { this.$store.commit('SET_REQUEST_QUOTE', false) },
     submit() {
-      if(this.$refs.form.validate()) {
-        this.$store.dispatch({ type: 'sendMessage', form: this.form }).then( () => this.$refs.form.reset())
-      }
+      if(this.$refs.form.validate()) {this.$store.dispatch({ type: 'sendMessage', form: this.form }).then( () => this.$refs.form.reset())}
       this.close()
     }
   }
