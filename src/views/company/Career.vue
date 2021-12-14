@@ -10,7 +10,7 @@
     <!-- <div style="border-left: 2px solid red; background-color: rgb(289 83 80 / 10%);" class="mt-6 pa-3 red--text">We don't have any openings currently, please visit us again soon.</div> -->
     <div style="font-size: 25px; font-weight: 500;" class="mt-8 mb-4">Available Opening Jobs</div>
     <div class="jobs">
-      <div class="job__item pa-4 pa-md-5 pa-lg-6" v-for="(j, a) in jobs" :key="a">
+      <div class="job__item pa-4 pa-md-5 pa-lg-6" style="cursor: pointer;" v-for="(j, a) in jobs" :key="a" @click="view(j['.key'])">
         <div class="job__title text-capitalize" style="line-height: 1.2; letter-spacing: .5px; font-weight: bold;">{{ j.title }}</div>
         <div class="caption mt-2" style="line-height: 1;">Vacancy :- <b>{{ j.vacancy }}</b></div>
         <div class="caption my-1" style="line-height: 1;">Experiance :- <b>{{ j.experience }} yrs. / {{ j.level }}</b></div>
@@ -74,6 +74,9 @@ export default {
     ]
   }),
   methods: {
+    view(doc) {
+      this.$router.push(`/company/career/${doc}`)
+    },
     apply() { 
       if(this.$refs.form.validate()) {
         this.dialog = false

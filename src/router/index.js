@@ -44,6 +44,7 @@ const routes = [
       { path: 'success-stories', name: 'Success Stories', component: () => import('@/views/company/SuccessStories') },
       { path: 'portfolio', name: 'Portfolios', component: () => import('@/views/company/Portfolios') },
       { path: 'career', name: 'Career', component: () => import('@/views/company/Career') },
+      { path: 'career/:id', name: 'Career View', component: () => import('@/views/company/ViewJob') },
       { path: 'gallery', name: 'Gallery', component: () => import('@/views/company/Gallery') },
     ]
   },
